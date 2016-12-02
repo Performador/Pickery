@@ -8,15 +8,15 @@ The idea is to provide a photos experience that is
 - Secure: your images and videos are encrypted so nobody else can see them
 - Simple: the focus here is the absolute bare bones photos experience
 
-# Storage: AWS S3
+## Storage: AWS S3
 
-We store the binary blobs for resources on S3. The key name is the SHA256 of the resource where `\` is substituded with `_`. Let's call this the signature of the resource.
+We store the binary blobs for resources on S3. The key name is the base 66 encoding of the SHA256 of the resource where `\` is substituded with `_`. Let's call this the signature of the resource.
 
 This substitution is done to allow these resources to be downloaded to the local file system and be represented with the signature as the file name.
 
 Pickery will create a bucket that looks like `pickery.XXXX-XXX-XXX-XXXX-XXX` where the last part is a UUID to avoid bucket name collisions. 
 
-# Meta data: AWS DynamoDB
+## Meta data: AWS DynamoDB
 
 We store the asset meta data in DynamoDB. Asset meta data is a JSON document that contains:
 
@@ -34,7 +34,7 @@ Pickery will create a table named `pickery` with the following schema:
 - TimeModified (Number). This is the number of seconds passed since Jan 1. 1970 at UTC0
 - MetaData (String). This is where we store the JSON desctibed above.
 
-# Deletions
+## Deletions
 
 When the user deletes an asset (picture/video), we delete all associated resources from S3 and set it's MetaData to nil in DynamoDB.
 
