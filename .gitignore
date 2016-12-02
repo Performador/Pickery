@@ -1,0 +1,9 @@
+Carthage/
+Pods/
+
+xcuserdata/
+.build/
+*.xcworkspace
+*.xcuserstate
+*.xccheckout
+
