@@ -34,7 +34,7 @@ def all_pods
     pod 'SwiftLocation'
     pod 'KeychainAccess'
     pod 'FileBrowser'
-    pod 'ReactiveSwift', '1.0.0-alpha.4'
+    pod 'ReactiveSwift', '= 1.0.0-alpha.4'
 end
 
 target :'iOS' do

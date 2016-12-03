@@ -22,7 +22,7 @@ PODS:
   - Realm/Headers (2.1.0)
   - RealmSwift (2.1.0):
     - Realm (= 2.1.0)
-  - Result (3.0.0)
+  - Result (3.1.0)
   - SwiftLocation (1.1.0)
   - TextAttributes (1.0)
 
@@ -83,7 +83,7 @@ SPEC CHECKSUMS:
   ReactiveSwift: 3fa49d2db97609ea700cd2b8f1bfbdd162024f97
   Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
   RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
-  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+  Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   SwiftLocation: f1bf5acb7992dd96c6f773c383f9c0479f07727d
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
