@@ -1,7 +1,8 @@
 # Pickery: Open source photos
 
 [![Build Status](https://travis-ci.org/Performador/Pickery.svg)](https://travis-ci.org/Performador/Pickery)
-![Swift 3.0.x](https://img.shields.io/badge/Swift-3.0.x-orange.svg)
+![Swift 3.0.x](https://img.shields.io/badge/language-swift%203-4BC51D.svg?style=flat)
+![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)
 
 The idea is to provide a photos experience that is
 - Flexible: you are not tied to any big company to guide that experience for you
