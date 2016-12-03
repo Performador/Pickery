@@ -1,4 +1,4 @@
-# Pickery: Open source photos
+# Pickery: Open source photos client
 
 [![Build Status](https://travis-ci.org/Performador/Pickery.svg)](https://travis-ci.org/Performador/Pickery)
 ![Swift 3.0.x](https://img.shields.io/badge/language-swift%203-4BC51D.svg?style=flat)
@@ -9,6 +9,8 @@ The idea is to provide a photos experience that is
 - Cheap: the hosting for your data should not cost arm and a leg
 - Secure: your images and videos are encrypted so nobody else can see them
 - Simple: the focus here is the absolute bare bones photos experience
+
+This project contains the source for an iOS client that works with AWS SDK to store your pictures and videos.
 
 ## Storage: AWS S3
 
@@ -45,6 +47,6 @@ Check out `Python/Export.py` for a script that you can use to download all your 
 
 # Future
 
-- More platforms (Android, Web)
+- More platforms (tvOS, watchOS, Android, Web)
 - More backends (Remote file system, Google, Apple)
 
