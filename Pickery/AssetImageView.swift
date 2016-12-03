@@ -11,7 +11,6 @@ import AVFoundation
 import Photos
 import ReactiveSwift
 import Result
-import ChameleonFramework
 
 /// An image view that displays an asset
 class AssetImageView : UIImageView {

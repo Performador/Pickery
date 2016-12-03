@@ -28,7 +28,7 @@ def all_pods
     pod 'Arcane', :git => 'https://github.com/onmyway133/Arcane.git', :branch => 'master'
     pod 'TextAttributes'
     pod 'KDCircularProgress'
-    pod 'ChameleonFramework/Swift'
+    pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
     pod 'ReachabilitySwift'
     pod 'ActionSheetPicker-3.0'
     pod 'SwiftLocation'

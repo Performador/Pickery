@@ -32,7 +32,7 @@ DEPENDENCIES:
   - AWSCore
   - AWSDynamoDB
   - AWSS3
-  - ChameleonFramework/Swift
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
   - FileBrowser
   - FontAwesome.swift (from `https://github.com/thii/FontAwesome.swift.git`, branch `master`)
@@ -49,6 +49,8 @@ EXTERNAL SOURCES:
   Arcane:
     :branch: master
     :git: https://github.com/onmyway133/Arcane.git
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
   Eureka:
     :branch: master
     :git: https://github.com/xmartlabs/Eureka.git
@@ -60,6 +62,9 @@ CHECKOUT OPTIONS:
   Arcane:
     :commit: 3dbba26248baa2b8631c4ed16e319e11f019662d
     :git: https://github.com/onmyway133/Arcane.git
+  ChameleonFramework:
+    :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
+    :git: https://github.com/ViccAlexander/Chameleon.git
   Eureka:
     :commit: 765c9001e144f013b2107f17dacf747898d12679
     :git: https://github.com/xmartlabs/Eureka.git
@@ -87,6 +92,6 @@ SPEC CHECKSUMS:
   SwiftLocation: f1bf5acb7992dd96c6f773c383f9c0479f07727d
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
-PODFILE CHECKSUM: 9e6869035e2366e58ac47b2dd8c7be68eb103586
+PODFILE CHECKSUM: 027e9e40addd51d190747d6423ea96982c235e9e
 
 COCOAPODS: 1.1.0.rc.3

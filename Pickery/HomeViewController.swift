@@ -8,6 +8,7 @@
 
 import Foundation
 import TextAttributes
+import ChameleonFramework
 
 /// The entry point for the app
 class HomeViewController : UIViewController {
@@ -27,7 +28,7 @@ class HomeViewController : UIViewController {
     
     /// Are we on a light background
     var isBackgroundLight : Bool {
-        return UIColor(averageColorFrom: backgroundImage).isLight
+        return UIColor(averageColorFrom: (backgroundImage ?? UIImage())).isLight
     }
     
     /// The foreground text color
