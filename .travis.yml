@@ -8,4 +8,4 @@ before_install:
 xcode_workspace: Pickery.xcworkspace
 xcode_scheme: iOS
 
-script: xcodebuild -scheme "iOS" -workspace "Pickery.xcworkspace" -sdk iphonesimulator10.1 | xcpretty && exit ${PIPESTATUS[0]}
+script: xcodebuild -scheme "iOS" -workspace "Pickery.xcworkspace" -sdk iphonesimulator | xcpretty && exit ${PIPESTATUS[0]}
