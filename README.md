@@ -39,6 +39,10 @@ Pickery will create a table named `pickery` with the following schema:
 | timeStateChanged | number | This is the number of seconds passed since Jan 1. 1970 at UTC0 |
 
 
+## Exporting
+
+Check out `Python/Export.py` for a script that you can use to download all your assets using boto.
+
 # Future
 
 - More platforms (Android, Web)
