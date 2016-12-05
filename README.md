@@ -16,6 +16,7 @@ This is an iOS client that works with AWS SDK to store your pictures and videos.
   <img width="20%" src="http://www.okanarikan.com/assets/Apps/Pickery/Screen3.jpg" alt="PickeryIcon" />
 </p>
 
+> This app is not associated with Amazon.com, Inc.
 
 
 ## Storage: AWS S3
