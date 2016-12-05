@@ -22,11 +22,11 @@ This is an iOS client that works with AWS SDK to store your pictures and videos.
 
 Each asset (video, picture ...) is made up of one or more resources. These resources could be the original image data, additional thumbnails, editing data etc.
 
-The binary blobs for these resources are stored on S3 in a bucket that looks like `pickery.XXXX-XXX-XXX-XXXX-XXX` (the UUID is used to avoid bucket name collisions). The key name is the signature (unique identifier) of the resource.
+The binary blobs for these resources are stored on S3 in a bucket that looks like `pickery.XXXX-XXX-XXX-XXXX-XXX` (the UUID is used to avoid bucket name collisions). The key name is the signature (unique identifier) of the resource. The app will create this bucket if it does not exist already.
 
 ## Meta data: AWS DynamoDB
 
-The meta data associated with the assets is stored on DynamoDB in a table named `pickery`. This table will have the following schema:
+The meta data associated with the assets is stored on DynamoDB in a table named `pickery`. The app will create this table if it doesn't exist already. The table will have the following schema:
 
 | Name | Type | Description |
 |------|------|-------------|
@@ -42,9 +42,3 @@ The meta data associated with the assets is stored on DynamoDB in a table named 
 ## Exporting
 
 Check out `Python/Export.py` for a script that you can use to download all your assets using boto.
-
-# Future
-
-- More platforms (tvOS, watchOS, Android, Web)
-- More backends (Remote file system, Google, Apple)
-
