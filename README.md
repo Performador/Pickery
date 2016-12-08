@@ -43,3 +43,5 @@ The meta data associated with the assets is stored on DynamoDB in a table named 
 ## Exporting
 
 Check out `Python/Export.py` for a script that you can use to download all your assets using boto.
+
+<a href="https://itunes.apple.com/us/app/pickery/id1164219958"><img src="http://www.okanarikan.com/assets/Apps/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="App Store"/></a>
