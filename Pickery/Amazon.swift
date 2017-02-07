@@ -34,18 +34,18 @@ class Amazon : Backend {
         
         // The regions we present to the user and their locations for locating the closest one
         static let kAllRegions : [ Region ]     =   [
-            Region(regionEnum:.usEast1,      name:"US East (N. Virginia)",        regionString:"us-east-1",        coordinate:CLLocationCoordinate2D(latitude: 37.478397,  longitude: -76.453077)),
-            Region(regionEnum:.usWest1,      name:"US West (N. California)",      regionString:"us-west-1",        coordinate:CLLocationCoordinate2D(latitude: 36.778261,  longitude: -119.417932)),
-            Region(regionEnum:.usWest2,      name:"US West (Oregon)",             regionString:"us-west-2",        coordinate:CLLocationCoordinate2D(latitude: 43.804133,  longitude: -120.554201)),
-            Region(regionEnum:.euWest1,      name:"EU (Ireland)",                 regionString:"eu-west-1",        coordinate:CLLocationCoordinate2D(latitude: 53.412910,  longitude: -8.243890)),
-            Region(regionEnum:.euCentral1,   name:"EU (Frankfurt)",               regionString:"eu-central-1",     coordinate:CLLocationCoordinate2D(latitude: 50.110922,  longitude: 8.682127)),
-            Region(regionEnum:.apSoutheast1, name:"Asia Pacific (Singapore)",     regionString:"ap-southeast-1",   coordinate:CLLocationCoordinate2D(latitude: 1.352083,   longitude: 103.819836)),
-            Region(regionEnum:.apNortheast1, name:"Asia Pacific (Tokyo)",         regionString:"ap-northeast-1",   coordinate:CLLocationCoordinate2D(latitude: 35.689487,  longitude: 139.691706)),
-            Region(regionEnum:.apNortheast2, name:"Asia Pacific (Seoul)",         regionString:"ap-northeast-2",   coordinate:CLLocationCoordinate2D(latitude: 37.566535,  longitude: 126.977969)),
-            Region(regionEnum:.apSoutheast2, name:"Asia Pacific (Sydney)",        regionString:"ap-southeast-2",   coordinate:CLLocationCoordinate2D(latitude: -33.868820, longitude: 151.209296)),
-            Region(regionEnum:.apSouth1,     name:"Asia Pacific (Mumbai)",        regionString:"sa-east-1",        coordinate:CLLocationCoordinate2D(latitude: 19.075984,  longitude: 72.877656)),
-            Region(regionEnum:.saEast1,      name:"South America (Sao Paulo)",    regionString:"sa-east-1",        coordinate:CLLocationCoordinate2D(latitude: -23.550520, longitude: -46.633309)),
-            Region(regionEnum:.cnNorth1,     name:"China (Beijing)",              regionString:"cn-north-1",       coordinate:CLLocationCoordinate2D(latitude: 39.904211,  longitude: 116.407395)),
+            Region(regionEnum:.USEast1,      name:"US East (N. Virginia)",        regionString:"us-east-1",        coordinate:CLLocationCoordinate2D(latitude: 37.478397,  longitude: -76.453077)),
+            Region(regionEnum:.USWest1,      name:"US West (N. California)",      regionString:"us-west-1",        coordinate:CLLocationCoordinate2D(latitude: 36.778261,  longitude: -119.417932)),
+            Region(regionEnum:.USWest2,      name:"US West (Oregon)",             regionString:"us-west-2",        coordinate:CLLocationCoordinate2D(latitude: 43.804133,  longitude: -120.554201)),
+            Region(regionEnum:.EUWest1,      name:"EU (Ireland)",                 regionString:"eu-west-1",        coordinate:CLLocationCoordinate2D(latitude: 53.412910,  longitude: -8.243890)),
+            Region(regionEnum:.EUCentral1,   name:"EU (Frankfurt)",               regionString:"eu-central-1",     coordinate:CLLocationCoordinate2D(latitude: 50.110922,  longitude: 8.682127)),
+            Region(regionEnum:.APSoutheast1, name:"Asia Pacific (Singapore)",     regionString:"ap-southeast-1",   coordinate:CLLocationCoordinate2D(latitude: 1.352083,   longitude: 103.819836)),
+            Region(regionEnum:.APNortheast1, name:"Asia Pacific (Tokyo)",         regionString:"ap-northeast-1",   coordinate:CLLocationCoordinate2D(latitude: 35.689487,  longitude: 139.691706)),
+            Region(regionEnum:.APNortheast2, name:"Asia Pacific (Seoul)",         regionString:"ap-northeast-2",   coordinate:CLLocationCoordinate2D(latitude: 37.566535,  longitude: 126.977969)),
+            Region(regionEnum:.APSoutheast2, name:"Asia Pacific (Sydney)",        regionString:"ap-southeast-2",   coordinate:CLLocationCoordinate2D(latitude: -33.868820, longitude: 151.209296)),
+            Region(regionEnum:.APSouth1,     name:"Asia Pacific (Mumbai)",        regionString:"sa-east-1",        coordinate:CLLocationCoordinate2D(latitude: 19.075984,  longitude: 72.877656)),
+            Region(regionEnum:.SAEast1,      name:"South America (Sao Paulo)",    regionString:"sa-east-1",        coordinate:CLLocationCoordinate2D(latitude: -23.550520, longitude: -46.633309)),
+            Region(regionEnum:.CNNorth1,     name:"China (Beijing)",              regionString:"cn-north-1",       coordinate:CLLocationCoordinate2D(latitude: 39.904211,  longitude: 116.407395)),
             ]
     }
     
@@ -101,7 +101,7 @@ class Amazon : Backend {
     /// - parameter string: The region string like us-west-2
     /// - returns: The region struct that contains information about this region
     class func region(for string: String) -> Region? {
-        return Constants.kAllRegions.filter { $0.regionString == string }.first
+        return Constants.kAllRegions.filter { $0.name == string }.first
     }
     
     /// Remove all backend stuff

@@ -329,7 +329,7 @@ extension Amazon {
                                             key:                fileToUpload.signature,
                                             contentType:        fileToUpload.info[MetaInfoKey.mimeType.rawValue] as? String ?? MimeType.unknown.rawValue,
                                             expression:         expression,
-                                            completionHander:   { task, error in
+                                            completionHandler:  { task, error in
                                                 
                                                 // The file must still exist after uploading
                                                 assert(fileToUpload.localFileURL.exists)
@@ -468,7 +468,7 @@ extension Amazon {
                             bucket: bucketName,
                             key: key,
                             expression: nil,
-                            completionHander: { (task: AWSS3TransferUtilityDownloadTask, url: URL?, data: Data?, error: Swift.Error?) in
+                            completionHandler: { (task: AWSS3TransferUtilityDownloadTask, url: URL?, data: Data?, error: Swift.Error?) in
                                 // Error?
                                 if let error = error {
                                     sink.send(error: error as NSError)

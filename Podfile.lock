@@ -1,11 +1,11 @@
 PODS:
   - ActionSheetPicker-3.0 (2.2.0)
   - Arcane (0.5.0)
-  - AWSCore (2.4.12)
-  - AWSDynamoDB (2.4.12):
-    - AWSCore (= 2.4.12)
-  - AWSS3 (2.4.12):
-    - AWSCore (= 2.4.12)
+  - AWSCore (2.5.0)
+  - AWSDynamoDB (2.5.0):
+    - AWSCore (= 2.5.0)
+  - AWSS3 (2.5.0):
+    - AWSCore (= 2.5.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
@@ -17,13 +17,13 @@ PODS:
   - ReachabilitySwift (3)
   - ReactiveSwift (1.0.0-alpha.4):
     - Result (~> 3.0)
-  - Realm (2.1.0):
-    - Realm/Headers (= 2.1.0)
-  - Realm/Headers (2.1.0)
-  - RealmSwift (2.1.0):
-    - Realm (= 2.1.0)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
   - Result (3.1.0)
-  - SwiftLocation (1.1.0)
+  - SwiftLocation (1.1.1)
   - TextAttributes (1.0)
 
 DEPENDENCIES:
@@ -60,13 +60,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Arcane:
-    :commit: 3dbba26248baa2b8631c4ed16e319e11f019662d
+    :commit: 6768684645f284e8af0ad1a3655264a36d0cc3ef
     :git: https://github.com/onmyway133/Arcane.git
   ChameleonFramework:
     :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
     :git: https://github.com/ViccAlexander/Chameleon.git
   Eureka:
-    :commit: 765c9001e144f013b2107f17dacf747898d12679
+    :commit: 794d26dba869b5f9b8d8f94abc334b7f6fb6f2ba
     :git: https://github.com/xmartlabs/Eureka.git
   FontAwesome.swift:
     :commit: 2309b11d3ed5895fda0bfdc392d16a1d199c97c0
@@ -75,9 +75,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Arcane: 5f01dd42b0aa25c9f6b188cf7af758094a184d54
-  AWSCore: 8ee5b1dc06a0fd562429fe7120113ca93cbfbca6
-  AWSDynamoDB: f78e38016afa783c9c3d7d0f1c33c8c283eee8d9
-  AWSS3: 7bb3e095a37ed8334a0b868bbca74ab574b37a4f
+  AWSCore: e9839d27ceaa2db75934a9c418630ce63c23e347
+  AWSDynamoDB: 81b3523f113dacf53c071965662b7056ad866709
+  AWSS3: 3678dd99006ff77c825fb857fc7cbaca0db848c6
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   FileBrowser: af8abc035daca66a6066351ae162c4af4c6b24dd
@@ -86,12 +86,12 @@ SPEC CHECKSUMS:
   KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   ReactiveSwift: 3fa49d2db97609ea700cd2b8f1bfbdd162024f97
-  Realm: bc829ad0ef3d4eea70c34cfcc3b1704d18d50df1
-  RealmSwift: a4d4abbf0088c337cab5b738054395842e4b3052
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
-  SwiftLocation: f1bf5acb7992dd96c6f773c383f9c0479f07727d
+  SwiftLocation: aac16955b508c46b82bf07fcceb7e2a3b382b8d5
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
-PODFILE CHECKSUM: 027e9e40addd51d190747d6423ea96982c235e9e
+PODFILE CHECKSUM: ba8d0574ec75d09b4c02d35aead79836be6ad938
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.2.0

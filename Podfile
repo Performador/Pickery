@@ -4,23 +4,8 @@ use_frameworks!
 
 def all_pods
     pod 'AWSCore'
-    #pod 'AWSAutoScaling'
-    #pod 'AWSCloudWatch'
-    #pod 'AWSCognito'
-    #pod 'AWSCognitoIdentityProvider'
     pod 'AWSDynamoDB'
-    #pod 'AWSEC2'
-    #pod 'AWSElasticLoadBalancing'
-    #pod 'AWSIoT'
-    #pod 'AWSKinesis'
-    #pod 'AWSLambda'
-    #pod 'AWSMachineLearning'
-    #pod 'AWSMobileAnalytics'
     pod 'AWSS3'
-    #pod 'AWSSES'
-    #pod 'AWSSimpleDB'
-    #pod 'AWSSNS'
-    #pod 'AWSSQS'
     pod 'Realm'
     pod 'RealmSwift'
     pod 'FontAwesome.swift', :git => 'https://github.com/thii/FontAwesome.swift.git', :branch => 'master'
@@ -32,8 +17,8 @@ def all_pods
     pod 'ReachabilitySwift'
     pod 'ActionSheetPicker-3.0'
     pod 'SwiftLocation'
-    pod 'KeychainAccess'
     pod 'FileBrowser'
+    pod 'KeychainAccess'
     pod 'ReactiveSwift', '= 1.0.0-alpha.4'
 end
 

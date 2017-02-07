@@ -33,7 +33,7 @@ class AssetCache {
         
         // Find the last cached asset
         do {
-            for asset in try myRealm().objects(CachedRemoteAsset.self).sorted(byProperty: "dateStateChanged", ascending: false) {
+            for asset in try myRealm().objects(CachedRemoteAsset.self).sorted(byKeyPath: "dateStateChanged", ascending: false) {
                 return asset.dateStateChanged
             }
         } catch _ {

@@ -31,7 +31,7 @@ class AmazonTaskQueue {
         Network.sharedInstance.willBeginRequest()
         
         // Run the task
-        task.continue( { (task: AWSTask<ResultType>) -> (Any?) in
+        task.continueWith( block: { (task: AWSTask<ResultType>) -> (Any?) in
             
             // Done with the request
             Network.sharedInstance.didFinishRequest()
