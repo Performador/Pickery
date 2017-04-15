@@ -78,38 +78,6 @@ extension Amazon {
         }
     }
     
-    /// Delete the keys inside a bucket
-    ///
-    /// - parameter queue: The queue to execute on
-    /// - parameter bucketName: The name of the bucket to delete
-    /// - returns: The producer that will execute the task
-    internal class func deleteKeys(queue:        AmazonTaskQueue,
-                                   bucketName:   String,
-                                   keys:         [ String ]) -> SignalProducer<(),NSError> {
-        return SignalProducer<(),NSError> { sink, disposible in
-            let deleteRequest : AWSS3DeleteObjectsRequest = AWSS3DeleteObjectsRequest()
-            
-            deleteRequest.bucket    =   bucketName
-            deleteRequest.remove    =   AWSS3Remove()
-            deleteRequest.remove?.objects   = keys.map { (key: String) -> AWSS3ObjectIdentifier in
-                let identifier : AWSS3ObjectIdentifier = AWSS3ObjectIdentifier()
-                identifier.key = key
-                return identifier
-            }
-            
-            // Execute
-            queue.run(taskGenerator: {
-                return AWSS3.default().deleteObjects(deleteRequest)}
-            , description: "Deleting keys") { task in
-                if let error = task.error {
-                    sink.send(error: error as NSError)
-                } else {
-                    sink.sendCompleted()
-                }
-            }
-        }
-    }
-    
     /// Delete a bucket
     ///
     /// The bucket must be emoty
@@ -150,7 +118,7 @@ extension Amazon {
         
         return Amazon
                 .listBucket(queue: queue, bucketName: bucketName)
-                .flatMap(.merge) { return Amazon.deleteKeys(queue: queue, bucketName: bucketName, keys: $0) }
+                .flatMap(.merge) { return Amazon.removeKeys(queue: queue, bucketName: bucketName, keys: $0) }
                 .then(Amazon.deleteBucket(queue: queue, bucketName: bucketName))
     }
     
