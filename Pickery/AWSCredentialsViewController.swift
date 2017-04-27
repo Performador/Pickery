@@ -94,18 +94,18 @@ class AWSCredentialsViewController : FormViewController {
     func pickNearestRegion() {
         
         // Grab the location
-        _ = Location.getLocation( withAccuracy: .city, timeout: TimeInterval(60), onSuccess: { foundLocation in
+        Location.getLocation(accuracy: .city, frequency: Frequency.oneShot, success: { request, location in
             assertMainQueue()
             
             // Pick the closest region
             let closestRegion = Amazon.Constants
                 .kAllRegions
                 .map { (region: Amazon.Region) -> (coordinate: CLLocationDistance, name: String, regionText: String) in
-                    return (region.coordinate.metersTo(coordinate: foundLocation.coordinate),region.name, region.regionString)
+                    return (region.coordinate.metersTo(coordinate: location.coordinate),region.name, region.regionString)
                 }
                 .min { return $0.0 < $1.0 }
             
-
+            
             // Got region?
             if let closestRegion = closestRegion {
                 Credentials.sharedInstance.awsRegion = closestRegion.regionText
@@ -116,9 +116,10 @@ class AWSCredentialsViewController : FormViewController {
                     row.reload()
                 }
             }
-        }) { (lastValidLocation, error) in
+        }) { location, request, error in
             Logger.error(error: error)
         }
+        
     }
     
     /// Trigger the login

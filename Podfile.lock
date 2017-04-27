@@ -1,29 +1,29 @@
 PODS:
   - ActionSheetPicker-3.0 (2.2.0)
   - Arcane (0.5.0)
-  - AWSCore (2.5.0)
-  - AWSDynamoDB (2.5.0):
-    - AWSCore (= 2.5.0)
-  - AWSS3 (2.5.0):
-    - AWSCore (= 2.5.0)
+  - AWSCore (2.5.5)
+  - AWSDynamoDB (2.5.5):
+    - AWSCore (= 2.5.5)
+  - AWSS3 (2.5.5):
+    - AWSCore (= 2.5.5)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
-  - Eureka (2.0.0-beta.1)
+  - Eureka (3.0.0)
   - FileBrowser (0.2.0)
-  - FontAwesome.swift (1.1.0)
+  - FontAwesome.swift (1.1.2)
   - KDCircularProgress (1.5.2)
-  - KeychainAccess (3.0.1)
+  - KeychainAccess (3.0.2)
   - ReachabilitySwift (3)
   - ReactiveSwift (1.0.0-alpha.4):
     - Result (~> 3.0)
-  - Realm (2.4.2):
-    - Realm/Headers (= 2.4.2)
-  - Realm/Headers (2.4.2)
-  - RealmSwift (2.4.2):
-    - Realm (= 2.4.2)
-  - Result (3.1.0)
-  - SwiftLocation (1.1.1)
+  - Realm (2.6.2):
+    - Realm/Headers (= 2.6.2)
+  - Realm/Headers (2.6.2)
+  - RealmSwift (2.6.2):
+    - Realm (= 2.6.2)
+  - Result (3.2.1)
+  - SwiftLocation (2.0.2)
   - TextAttributes (1.0)
 
 DEPENDENCIES:
@@ -63,35 +63,35 @@ CHECKOUT OPTIONS:
     :commit: 6768684645f284e8af0ad1a3655264a36d0cc3ef
     :git: https://github.com/onmyway133/Arcane.git
   ChameleonFramework:
-    :commit: dcf98f9bf3a632a7f40679b7da46f09681e48526
+    :commit: acc480fbe023c6e5fe40f68593f4a70a8c4c7ad5
     :git: https://github.com/ViccAlexander/Chameleon.git
   Eureka:
-    :commit: 794d26dba869b5f9b8d8f94abc334b7f6fb6f2ba
+    :commit: cd0a057a2612286340e5b7f8ba5d06e6fcd4e2bd
     :git: https://github.com/xmartlabs/Eureka.git
   FontAwesome.swift:
-    :commit: 2309b11d3ed5895fda0bfdc392d16a1d199c97c0
+    :commit: b161d350884a07720475b7d4c77485981010215a
     :git: https://github.com/thii/FontAwesome.swift.git
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
   Arcane: 5f01dd42b0aa25c9f6b188cf7af758094a184d54
-  AWSCore: e9839d27ceaa2db75934a9c418630ce63c23e347
-  AWSDynamoDB: 81b3523f113dacf53c071965662b7056ad866709
-  AWSS3: 3678dd99006ff77c825fb857fc7cbaca0db848c6
+  AWSCore: 665371d51ccdfe62430c586e3cb8e57eff8ce09d
+  AWSDynamoDB: 9f7f84d571a2d8144a80f0562230fcc9461e4ba8
+  AWSS3: 7a910824991e5dc13971f7ae73230d354666880e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
+  Eureka: 5b9418d7bfdc21ca977d69d124a6409f3e9af2c7
   FileBrowser: af8abc035daca66a6066351ae162c4af4c6b24dd
-  FontAwesome.swift: beb63f208f69f998d00fdb2d4d5d8813b494f3d8
+  FontAwesome.swift: b761759b4ce0ba8275b294c0f7c100b9fca72efd
   KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
-  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   ReactiveSwift: 3fa49d2db97609ea700cd2b8f1bfbdd162024f97
-  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
-  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
-  Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
-  SwiftLocation: aac16955b508c46b82bf07fcceb7e2a3b382b8d5
+  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
+  RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  SwiftLocation: 887fa007f6f0567dfd00543c3fb356c4c793c2a6
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
 PODFILE CHECKSUM: 8624b0dd6efc310f00c84657975598ca02310c27
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

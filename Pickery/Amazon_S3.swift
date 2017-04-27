@@ -216,7 +216,7 @@ extension Amazon {
                         }, description: "Creating new bucket") { task in
                             
                             // Did we fail?
-                            if let error = task.error as? NSError, error.code != AWSS3ErrorType.bucketAlreadyOwnedByYou.rawValue {
+                            if let error = task.error as NSError?, error.code != AWSS3ErrorType.bucketAlreadyOwnedByYou.rawValue {
                                 sink.send(error: error as NSError)
                             } else {
                                 sink.send(value: id)

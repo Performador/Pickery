@@ -230,7 +230,7 @@ extension PHAsset {
         assert(fileURL.exists)
         
         // Figure out the mime type
-        var mimeType = UTTypeCopyPreferredTagWithClass(resource.uniformTypeIdentifier as CFString, kUTTagClassMIMEType)?.takeRetainedValue() as? String
+        var mimeType = UTTypeCopyPreferredTagWithClass(resource.uniformTypeIdentifier as CFString, kUTTagClassMIMEType)?.takeRetainedValue() as String?
         
         // Guess the mime type from the extension
         if mimeType == nil {

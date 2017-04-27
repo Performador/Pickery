@@ -106,7 +106,7 @@ extension Amazon {
             }, description: "Creating DynamoDB table: \(tableName)") { task in
                 
                 // Did we fail?
-                if let error = task.error as? NSError, error.code != AWSDynamoDBErrorType.resourceInUse.rawValue {
+                if let error = task.error as NSError?, error.code != AWSDynamoDBErrorType.resourceInUse.rawValue {
                     sink.send(error: error)
                 } else {
 
@@ -207,7 +207,7 @@ extension Amazon {
         let expression = AWSDynamoDBScanExpression()
         
         expression.filterExpression             =   "timeStateChanged > :val"
-        expression.expressionAttributeValues    =   [   ":val"      : (double: timeStateChanged) as NSNumber ]
+        expression.expressionAttributeValues    =   [   ":val"      : timeStateChanged as NSNumber ]
         expression.exclusiveStartKey            =   startKey
         
         queue.run(taskGenerator: {

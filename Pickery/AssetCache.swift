@@ -157,7 +157,9 @@ class AssetCache {
                         }
                         
                         for resource in resources {
-                            realm.add(resource)
+                            if realm.object(ofType: CachedRemoteResource.self, forPrimaryKey: resource.signature as AnyObject) == nil {
+                                realm.add(resource)
+                            }
                         }
                     }
                     

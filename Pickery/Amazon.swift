@@ -135,7 +135,7 @@ class Amazon : Backend {
             let serviceProvider     =   AWSServiceConfiguration(region: region, credentialsProvider: credentialsProvider)
     
             // Setup the log level
-            AWSLogger.default().logLevel = .error
+            AWSDDLog.sharedInstance.logLevel = .error
     
             // Set these credentials as the default credentials to use
             AWSServiceManager.default().defaultServiceConfiguration = serviceProvider

@@ -73,8 +73,8 @@ class GalleryData {
             
             // Count the bytes
             for resource in asset.resources {
-                numBytes += resource.numBytes
-                bytesPerResourceType[resource.type] = (bytesPerResourceType[resource.type] ?? 0) + resource.numBytes
+                numBytes += Int64(resource.numBytes)
+                bytesPerResourceType[resource.type] = (bytesPerResourceType[resource.type] ?? 0) + Int64(resource.numBytes)
             }
             
             if asset.asset.localIdentifier != nil {
