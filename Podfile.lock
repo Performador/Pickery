@@ -15,8 +15,8 @@ PODS:
   - KDCircularProgress (1.5.2)
   - KeychainAccess (3.0.2)
   - ReachabilitySwift (3)
-  - ReactiveSwift (1.0.0-alpha.4):
-    - Result (~> 3.0)
+  - ReactiveSwift (1.1.1):
+    - Result (~> 3.2)
   - Realm (2.6.2):
     - Realm/Headers (= 2.6.2)
   - Realm/Headers (2.6.2)
@@ -39,7 +39,7 @@ DEPENDENCIES:
   - KDCircularProgress
   - KeychainAccess
   - ReachabilitySwift
-  - ReactiveSwift (= 1.0.0-alpha.4)
+  - ReactiveSwift
   - Realm
   - RealmSwift
   - SwiftLocation
@@ -85,13 +85,13 @@ SPEC CHECKSUMS:
   KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
   KeychainAccess: a986406022dfc7c634c691ad3bec670cc6a32002
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  ReactiveSwift: 3fa49d2db97609ea700cd2b8f1bfbdd162024f97
+  ReactiveSwift: 2489549e3231a6ff68ec99f3d320bb264f10ba0a
   Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   SwiftLocation: 887fa007f6f0567dfd00543c3fb356c4c793c2a6
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
-PODFILE CHECKSUM: 8624b0dd6efc310f00c84657975598ca02310c27
+PODFILE CHECKSUM: b325552982da1e36977bc6197d8c56787b5e168d
 
 COCOAPODS: 1.2.1

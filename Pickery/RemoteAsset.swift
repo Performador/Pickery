@@ -289,7 +289,7 @@ class RemoteAsset : Asset {
         let resources = self.resources.filter { $0.type != ResourceType.thumbnail.rawValue }
         
         // Let's see what resources we have
-        return SignalProducer<String, NSError>(values: resources.map { return $0.signature })
+        return SignalProducer<String, NSError>(resources.map { return $0.signature })
             
                 // Download them to disk
                 .flatMap(.merge) { signature in

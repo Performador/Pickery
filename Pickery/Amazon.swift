@@ -231,7 +231,7 @@ class Amazon : Backend {
         let queue = taskQueue
         
         // Produce signatures to delete
-        return SignalProducer<String, NSError>(values: assets)
+        return SignalProducer<String, NSError>(assets)
             
                 // This is where we delete a single asset
                 .flatMap(.merge) { signature in
