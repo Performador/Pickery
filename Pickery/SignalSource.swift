@@ -20,7 +20,7 @@ class SignalSource<SignalType, ErrType : Error> {
     var signal          : Signal<SignalType, ErrType> { return signalSinkPair.0 }
     
     /// Get the observer
-    var observer        : Observer<SignalType, ErrType> { return signalSinkPair.1 }
+    var observer        : Signal<SignalType, ErrType>.Observer { return signalSinkPair.1 }
         
     /// We are done sending this
     deinit {

@@ -45,7 +45,7 @@ extension Amazon {
     /// - parameter sink: The sink to deliver events to
     /// - parameter tableName: The name of the table to wait
     internal class func waitForTable(queue:      AmazonTaskQueue,
-                                     sink:       Observer<(),NSError>,
+                                     sink:       Signal<(),NSError>.Observer,
                                      tableName:  String) {
         
         
@@ -201,7 +201,7 @@ extension Amazon {
     internal class func refresh(queue:               AmazonTaskQueue,
                                 timeStateChanged:    Double,
                                 startKey:            [ String : AWSDynamoDBAttributeValue ]?,
-                                sink:                Observer< [ AmazonModel ], NSError>) {
+                                sink:                Signal< [ AmazonModel ], NSError>.Observer) {
         
         // Do a DynamoDB query for all assets changed after this
         let expression = AWSDynamoDBScanExpression()

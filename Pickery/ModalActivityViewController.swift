@@ -10,7 +10,7 @@ import UIKit
 import ReactiveSwift
 
 /// Just displays an activity dialog while executing a signal producer
-class ModalActivityViewController<T : Any> : UIViewController {
+class ModalActivityViewController<T : Any> : UIViewController, ModalViewController {
     
     var activityIndicator   :   UIActivityIndicatorView!
     var titleView           :   UILabel!
@@ -81,8 +81,7 @@ class ModalActivityViewController<T : Any> : UIViewController {
     }
     
     /// Hmmm, failed, go back
-    override func errorDialogOk() {
-        super.errorDialogOk()
+    func errorDialogOk() {
         
         self.dismiss(animated: true) { 
             

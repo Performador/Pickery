@@ -114,7 +114,7 @@ extension PHAsset {
     /// - parameter videoURL: The local file URL for the video
     /// - parameter toImageURL: The file URL to create the snapshot to
     /// - parameter sink: The sink to send the resulting file to
-    private func createSnapshot(videoSize: CGSize, videoURL: URL, sink: Observer<PendingUploadResource, NSError>) {
+    private func createSnapshot(videoSize: CGSize, videoURL: URL, sink: Signal<PendingUploadResource, NSError>.Observer) {
         let avAsset         = AVURLAsset(url: videoURL, options: nil)
         let imageGenerator  = AVAssetImageGenerator(asset: avAsset)
         
@@ -145,7 +145,7 @@ extension PHAsset {
     /// - parameter targetHeight: The pixel height we want
     /// - parameter imageSource: The image source to create thumbnails for
     /// - parameter sink: The sink to send the generated file to
-    private func createThumbnail(imageSize: CGSize, targetHeight: CGFloat, imageSource: CGImageSource, sink: Observer<PendingUploadResource, NSError>) {
+    private func createThumbnail(imageSize: CGSize, targetHeight: CGFloat, imageSource: CGImageSource, sink: Signal<PendingUploadResource, NSError>.Observer) {
         let aspectRatio = Double(imageSize.width) / Double(imageSize.height)
         
         // The size we want
@@ -195,7 +195,7 @@ extension PHAsset {
     /// - parameter imageSize: The size of the image
     /// - parameter imageURL: Where the image is on disk
     /// - parameter sink: Where the resulting files should go
-    private func createThumbnails(imageSize: CGSize, imageURL: URL, sink: Observer<PendingUploadResource, NSError>) {
+    private func createThumbnails(imageSize: CGSize, imageURL: URL, sink: Signal<PendingUploadResource, NSError>.Observer) {
         assert(imageSize.width > 0)
         assert(imageSize.height > 0)
         assert(imageURL.isFileURL)
@@ -225,7 +225,7 @@ extension PHAsset {
     /// - parameter resource: The photos library resource to create the thumbnails for
     /// - parameter fileURL: Where the resource is locally
     /// - parameter sink: Where the resulting files should go
-    private func sendResource(resource: PHAssetResource, fileURL: URL, sink: Observer<PendingUploadResource, NSError>) {
+    private func sendResource(resource: PHAssetResource, fileURL: URL, sink: Signal<PendingUploadResource, NSError>.Observer) {
         assert(fileURL.isFileURL)
         assert(fileURL.exists)
         

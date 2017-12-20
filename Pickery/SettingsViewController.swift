@@ -148,7 +148,7 @@ class SettingsViewController : FormViewController {
         form +++ Section()
             <<< ButtonRow() { row in
                     row.title = "Delete Remote"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     self.nuke()
                 }
     
@@ -156,7 +156,7 @@ class SettingsViewController : FormViewController {
         form +++ Section()
             <<< ButtonRow() { row in
                     row.title = "Debug Settings"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     self.navigationController?.pushViewController(DebugSettingsViewController(), animated: true)
                 }
 

@@ -116,11 +116,6 @@ extension UIView {
         layer.shouldRasterize  =   true
     }
     
-    /// Overwrite to provide custom snapshot functionality
-    func snapshot() -> UIView {
-        return snapshotView(afterScreenUpdates: true) ?? UIView(frame: CGRect.zero)
-    }
-    
     /// Set the frame and force layout of the subviews
     ///
     /// - parameter frame : The frame for the view
@@ -129,3 +124,12 @@ extension UIView {
         self.layoutIfNeeded()
     }
 }
+/*
+extension UIView : Snapshottable {
+    
+    /// Overwrite to provide custom snapshot functionality
+    func snapshot() -> UIView {
+        return snapshotView(afterScreenUpdates: true) ?? UIView(frame: CGRect.zero)
+    }
+}
+ */

@@ -61,9 +61,9 @@ class ViewTransition: NSObject, UIViewControllerAnimatedTransitioning {
             let toTransitionView    =   toTransitionController.transitionView
             
             // Create the snapshots and figure out where they need to be in the root view
-            let fromSnapshot        =   fromTransitionView.snapshot()
+            let fromSnapshot        =   (fromTransitionView as? Snapshottable)?.snapshot() ?? fromTransitionView.snapshotView(afterScreenUpdates: false) ?? UIView(frame: CGRect.zero)
             let fromFrame           =   containerView.convert(fromTransitionView.bounds, from: fromTransitionView)
-            let toSnapshot          =   toTransitionView.snapshot()
+            let toSnapshot          =   (toTransitionView as? Snapshottable)?.snapshot() ?? toTransitionView.snapshotView(afterScreenUpdates: false) ?? UIView(frame: CGRect.zero)
             let toFrame             =   containerView.convert(toTransitionView.bounds, from: toTransitionView)
                         
             // Zero size frames should not be possible

@@ -21,9 +21,9 @@ class AmazonTaskQueue {
     /// - parameter taskGenerator: The block to generate the AWSTask (this is a block in case we want to re-try)
     /// - parameter description: The task description
     /// - parameter completion: The completion block to run after the task is executed
-    func run<ResultType : AnyObject>(   taskGenerator:  @escaping () -> AWSTask<ResultType>,
-                                        description:    String,
-                                        completion:     @escaping (AWSTask<ResultType>) -> Void) {
+    func run<ResultType>(taskGenerator:  @escaping () -> AWSTask<ResultType>,
+                           description:  String,
+                            completion:  @escaping (AWSTask<ResultType>) -> Void) {
         
         let task = taskGenerator()
         

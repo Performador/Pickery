@@ -3,6 +3,6 @@
 //
 
 
-@import AWSCore;
+//@import AWSCore;
 @import AWSDynamoDB;
 @import AWSS3;

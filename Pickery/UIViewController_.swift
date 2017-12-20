@@ -9,29 +9,16 @@
 import Foundation
 import ReactiveSwift
 import Eureka
-import TextAttributes
+
+protocol ModalViewController {
+    
+    /// Called when the user hits ok in an error dialog
+    func errorDialogOk()
+}
 
 extension UIViewController {
     
-    /// Called on the bottom VC when we are about to pop from a VC
-    func willPopFrom(controller: UIViewController, animated: Bool) {
-        
-    }
     
-    /// Called on the top VC when we are about to pop to a VC
-    func willPopTo(controller: UIViewController, animated: Bool) {
-        
-    }
-    
-    /// Called on the top VC when we are about to push from a VC
-    func willPushFrom(controller: UIViewController, animated: Bool) {
-        
-    }
-    
-    /// Called on the bottom VC when we are about to push to a VC
-    func willPushTo(controller: UIViewController, animated: Bool) {
-        
-    }
     
     /// Present a popover if on iPad
     func present(form: FormViewController, from element: AnyObject) {
@@ -65,9 +52,10 @@ extension UIViewController {
             
             // Set the attributed text for the title view
             titleView.numberOfLines     =   2
-            titleView.attributedText    =   NSAttributedString(string: title, attributes: TextAttributes().font(UIFont.systemFont(ofSize: 14)).alignment(.center)) +
-                                            NSAttributedString(string: "\n") +
-                                            NSAttributedString(string: subtitle, attributes: TextAttributes().font(UIFont.systemFont(ofSize: 10)).alignment(.center))
+            titleView.attributedText    =   NSAttributedString(string: title, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]) +
+                                            NSAttributedString(string: "\n", attributes: nil) +
+                                            NSAttributedString(string: subtitle, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 10)])
+            titleView.textAlignment     =   .center
             titleView.sizeToFit()
         }
     }
@@ -105,18 +93,14 @@ extension UIViewController {
             
             // Just show an OK button
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action: UIAlertAction) in
-                self.errorDialogOk()
+                
+                (self as? ModalViewController)?.errorDialogOk()
             }))
             
             // Show
             present(alertController, animated: true, completion: {
             })
         }
-    }
-    
-    /// Called when the user hits ok in an error dialog
-    func errorDialogOk() {
-        
     }
     
     /// Run an asynchronous task and monitor the errors

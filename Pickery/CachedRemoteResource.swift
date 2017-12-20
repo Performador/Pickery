@@ -13,15 +13,15 @@ import RealmSwift
 class CachedRemoteResource: CachedModel {
     
     /// The signature of the parent asset that this resurce belongs to
-    dynamic var parentSignature     :   String      =   ""
-    dynamic var fileName            :   String?
-    dynamic var type                :   String      =   ""
-    dynamic var mimeType            :   String      =   ""
-    dynamic var pixelWidth          =   Int(0)
-    dynamic var pixelHeight         =   Int(0)
-    dynamic var durationSeconds     =   Double(0)
-    dynamic var numBytes            =   Int(0)
-    dynamic var placeholder         :   Data?
+    @objc dynamic var parentSignature     :   String      =   ""
+    @objc dynamic var fileName            :   String?
+    @objc dynamic var type                :   String      =   ""
+    @objc dynamic var mimeType            :   String      =   ""
+    @objc dynamic var pixelWidth          =   Int(0)
+    @objc dynamic var pixelHeight         =   Int(0)
+    @objc dynamic var durationSeconds     =   Double(0)
+    @objc dynamic var numBytes            =   Int(0)
+    @objc dynamic var placeholder         :   Data?
     
     /// The name of the key we're storing this resource in
     //var key : String { return signature + "_" + fileName }

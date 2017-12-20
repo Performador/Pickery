@@ -13,7 +13,7 @@ import ReactiveSwift
 import Result
 
 /// An image view that displays an asset
-class AssetImageView : UIImageView {
+class AssetImageView : UIImageView, Snapshottable {
     
     struct Constants {
         
@@ -130,7 +130,7 @@ class AssetImageView : UIImageView {
     }
         
     /// Create a snapshot view
-    override func snapshot() -> UIView {
+    func snapshot() -> UIView {
         let imageView           =   UIImageView(frame: frame)
         imageView.image         =   image
         imageView.contentMode   =   contentMode

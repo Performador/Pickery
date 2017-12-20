@@ -23,7 +23,7 @@ extension Amazon {
     internal class func listBucket(queue:        AmazonTaskQueue,
                                    bucketName:   String,
                                    marker:       String?,
-                                   sink:         Observer<[String],NSError>) {
+                                   sink:         Signal<[String],NSError>.Observer) {
         
         // Create the request
         let request : AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()

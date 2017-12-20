@@ -30,6 +30,7 @@ class PlayerViewController : AVPlayerViewController, AVPlayerViewControllerDeleg
         super.init(nibName: nil, bundle: nil)
         
         // Blend the player in
+        modalPresentationStyle  =   .overCurrentContext
         modalTransitionStyle    =   .crossDissolve
         
         // Just in case we want

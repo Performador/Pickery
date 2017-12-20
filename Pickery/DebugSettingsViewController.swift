@@ -48,12 +48,12 @@ class DebugSettingsViewController : FormViewController {
         form +++ Section("Browse")
             <<< ButtonRow() { row in
                 row.title = "Tmp Directory"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     self.present(FileBrowser(initialPath: URL(fileURLWithPath: NSTemporaryDirectory())), animated: true)
             }
             <<< ButtonRow() { row in
                 row.title = "File Cache"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     self.present(FileBrowser(initialPath: FileManager.cacheURL), animated: true)
                 }
         
@@ -65,17 +65,17 @@ class DebugSettingsViewController : FormViewController {
                         return  RemoteLibrary.sharedInstance.uploadQueue.currentlyExecuting.value > 0 ||
                                 RemoteLibrary.sharedInstance.uploadQueue.numPending.value > 0
                     })
-                }.onCellSelection { row in
+                }.onCellSelection { _,_ in
                     FileManager.default.clearFolder(at: FileManager.tmpURL)
                 }
             <<< ButtonRow() { row in
                     row.title = "Clear File Cache"
-                }.onCellSelection { row in
+                }.onCellSelection { _,_ in
                     RemoteLibrary.sharedInstance.fileCache.clear()
                 }
             <<< ButtonRow() { row in
                     row.title = "Reset Transient Data"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     
                     // Go back to the root view controller
                     _ = self.navigationController?.popToRootViewController(animated: true)

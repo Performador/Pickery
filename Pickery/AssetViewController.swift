@@ -223,14 +223,14 @@ class AssetViewController : UIViewController, ViewTransitionController, UIScroll
     }
     
     /// Display info
-    func info(sender: UIBarButtonItem) {
+    @objc func info(sender: UIBarButtonItem) {
         
         // Present information about the current asset
         present(form: AssetDetailsViewController(asset: asset), from: sender)
     }
     
     /// Play the current asset
-    func play() {
+    @objc func play() {
         
         // Show the player view controller
         present(PlayerViewController(asset: asset), animated: true, completion: {

@@ -12,7 +12,7 @@ import KDCircularProgress
 import ReactiveSwift
 
 /// The overlay view that contains information about an asset
-class AssetOverlayView : UIView {
+class AssetOverlayView : UIView, Snapshottable {
     
     /// Da constants
     struct Constants {
@@ -106,7 +106,7 @@ class AssetOverlayView : UIView {
     }
     
     /// Create a snapshot view
-    override func snapshot() -> UIView {
+    func snapshot() -> UIView {
         return AssetOverlayView(asset: asset)
     }
     

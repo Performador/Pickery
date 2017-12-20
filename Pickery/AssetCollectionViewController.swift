@@ -175,36 +175,13 @@ extension AssetCollectionViewController {
         navigationController?.setToolbarHidden(true, animated: animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
-    /// Going back, reset the remote library
-    override func willPopTo(controller: UIViewController, animated: Bool) {
-        super.willPopTo(controller: controller, animated: animated)
-        
-        // Remove the backend
-        RemoteLibrary.sharedInstance.install(backend: nil)
-    }
-    
-    /// Figure out the selected index
-    override func willPopFrom(controller: UIViewController, animated: Bool) {
-        super.willPopFrom(controller: controller, animated: animated)
-        
-        // Make sure we are setup for the transition from another view controller
-        selectAssetFromController(controller: controller, animated: animated)
-    }
-    
-    override func willPushFrom(controller: UIViewController, animated: Bool) {
-        super.willPushFrom(controller: controller, animated: animated)
-        
-        // Make sure we are setup for the transition from another view controller
-        selectAssetFromController(controller: controller, animated: animated)
-    }
 }
 
 // MARK: - Editing management
 extension AssetCollectionViewController {
     
     /// Called to refresh the collection
-    func refresh(sender: UIRefreshControl) {
+    @objc func refresh(sender: UIRefreshControl) {
         
         // Turn off the refresh
         sender.endRefreshing()
@@ -360,7 +337,7 @@ extension AssetCollectionViewController {
     }
     
     /// Enter the delete mode
-    func deleteSelected(sender: UIBarButtonItem) {
+    @objc func deleteSelected(sender: UIBarButtonItem) {
         
         // Delete the index paths
         delete(items: selectedIndexPaths ?? [ IndexPath ]())
@@ -384,7 +361,7 @@ extension AssetCollectionViewController {
     }
     
     /// Purge the already uploaded assets
-    func purge(sender: UIBarButtonItem) {
+    @objc func purge(sender: UIBarButtonItem) {
         
         // The local photos assets to remove
         let assetsToRemove = isEditing  ?   (selectedIndexPaths ?? []).flatMap { (galleryData.asset(at: $0) as? PhotosAsset)?.phAsset }
@@ -418,7 +395,7 @@ extension AssetCollectionViewController {
     }
     
     /// Got internet?
-    func internet(sender: UIBarButtonItem) {
+    @objc func internet(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Connectivity", message: "There was an error connecting to the backend", preferredStyle: UIAlertControllerStyle.actionSheet)
         
         // Do we have an initializer?
@@ -450,7 +427,7 @@ extension AssetCollectionViewController {
     }
     
     /// Request access
-    func requestAccess(sender: UIBarButtonItem) {
+    @objc func requestAccess(sender: UIBarButtonItem) {
         let controller = UIAlertController(title: "Photo Library Access", message: "I need access to your photo library to back it up.", preferredStyle: UIAlertControllerStyle.actionSheet)
         
         controller.addAction(UIAlertAction(title: "Take me to settings", style: UIAlertActionStyle.default, handler: { _ in
@@ -472,7 +449,7 @@ extension AssetCollectionViewController {
     }
     
     /// Show the program settings
-    func showSettings(sender: UIBarButtonItem) {
+    @objc func showSettings(sender: UIBarButtonItem) {
         present(form: SettingsViewController(), from: sender)
     }
 }
@@ -540,5 +517,33 @@ extension AssetCollectionViewController : ViewTransitionController {
             // Make sure the index path is visible
             willTransition(from: indexPath)
         }
+    }
+}
+
+// MARK: - Navigation management
+extension AssetCollectionViewController : NavigationItem {
+    func willPushTo(controller: UIViewController, animated: Bool) {
+
+    }
+    
+    
+    /// Going back, reset the remote library
+    func willPopTo(controller: UIViewController, animated: Bool) {
+        
+        // Remove the backend
+        RemoteLibrary.sharedInstance.install(backend: nil)
+    }
+    
+    /// Figure out the selected index
+    func willPopFrom(controller: UIViewController, animated: Bool) {
+        
+        // Make sure we are setup for the transition from another view controller
+        selectAssetFromController(controller: controller, animated: animated)
+    }
+    
+    func willPushFrom(controller: UIViewController, animated: Bool) {
+        
+        // Make sure we are setup for the transition from another view controller
+        selectAssetFromController(controller: controller, animated: animated)
     }
 }

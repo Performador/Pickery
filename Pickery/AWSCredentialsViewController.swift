@@ -77,7 +77,7 @@ class AWSCredentialsViewController : FormViewController {
                 }
             <<< ButtonRow() { row in
                     row.title = "Pick nearest region"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     self.pickNearestRegion()
                 }
         
@@ -85,7 +85,7 @@ class AWSCredentialsViewController : FormViewController {
         form +++ Section("")
             <<< ButtonRow() { row in
                     row.title = "Connect"
-                }.onCellSelection { _ in
+                }.onCellSelection { _,_  in
                     self.login()
                 }
     }
@@ -94,7 +94,7 @@ class AWSCredentialsViewController : FormViewController {
     func pickNearestRegion() {
         
         // Grab the location
-        Location.getLocation(accuracy: .city, frequency: Frequency.oneShot, success: { request, location in
+        Locator.currentPosition(accuracy: .city, onSuccess: { location in
             assertMainQueue()
             
             // Pick the closest region
@@ -116,7 +116,7 @@ class AWSCredentialsViewController : FormViewController {
                     row.reload()
                 }
             }
-        }) { location, request, error in
+        }) { error, _ in
             Logger.error(error: error)
         }
         

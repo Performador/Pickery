@@ -13,7 +13,7 @@ import RealmSwift
 class CachedModel : Object {
     
     /// Assets and Resources have signatures
-    dynamic var signature : String = ""
+    @objc dynamic var signature : String = ""
     
     /// Ctor
     convenience init(data: [ String : Any ]) throws {

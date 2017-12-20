@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import TextAttributes
 import ChameleonFramework
 
 /// The entry point for the app
@@ -67,14 +66,16 @@ class HomeViewController : UIViewController {
         teaserText.numberOfLines    =   0
         teaserText.textColor        =   textColor
         teaserText.font             =   Appearance.Constants.kLargeFont
-        teaserText.attributedText   =   NSAttributedString(string: "Hello", attributes: TextAttributes().alignment(.right))
-                                        + NSAttributedString(string: "\n\n")
-                                        + NSAttributedString(string: "I'm here to to backup your\nphotos and videos to AWS - S3", attributes: TextAttributes().font(Appearance.Constants.kBaseFont).alignment(.right))
+        teaserText.textAlignment    =   .right
+        teaserText.attributedText   =   NSAttributedString(string: "Hello", attributes: nil) +
+                                        NSAttributedString(string: "\n\n") +
+                                        NSAttributedString(string: "I'm here to to backup your\nphotos and videos to AWS - S3", attributes: [NSAttributedStringKey.font : Appearance.Constants.kBaseFont])
         teaserText.sizeToFit()
         teaserText.addShadow(color: shadowColor)
                 
         goButton                    =   UILabel(frame: CGRect.zero)
-        goButton.attributedText     =   NSAttributedString(string: "Credentials", attributes: TextAttributes().font(Appearance.Constants.kXLargeFont).underlineStyle(NSUnderlineStyle.styleSingle))
+        goButton.attributedText     =   NSAttributedString(string: "Credentials", attributes: [NSAttributedStringKey.font : Appearance.Constants.kXLargeFont,
+                                                                                               NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
         goButton.textColor          =   textColor
         goButton.sizeToFit()
         goButton.isUserInteractionEnabled   =   true
@@ -112,7 +113,7 @@ class HomeViewController : UIViewController {
     }
     
     /// Create/initialize the backend then go to the assets view
-    func go() {
+    @objc func go() {
         present(form: AWSCredentialsViewController(), from: goButton)
     }
     

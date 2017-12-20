@@ -10,7 +10,6 @@ import UIKit
 import Photos
 import ReactiveSwift
 import Result
-import TextAttributes
 import FontAwesome_swift
 
 // The view controller that displays a linear array of assets
@@ -164,7 +163,7 @@ class AssetPageViewController: UIPageViewController, UIPageViewControllerDelegat
     }
     
     /// Enter/exit focus mode
-    func toggleFocusMode() {
+    @objc func toggleFocusMode() {
         focusMode = !focusMode
     }
     

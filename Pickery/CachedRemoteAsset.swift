@@ -12,21 +12,21 @@ import CoreLocation
 
 /// The realm class we use to represent cached assets
 class CachedRemoteAsset : CachedModel {
-    dynamic var localIdentifier     :   String?     ///< If this represents a local photos asset, its local identifier is here
-    dynamic var dateStateChanged    =   Date()      ///< The last modification timestamp
-    dynamic var type : String       =   ""          ///< The asset type
-    dynamic var pixelWidth          =   Int(0)      ///< Resolution
-    dynamic var pixelHeight         =   Int(0)
-    dynamic var durationSeconds     =   Double(0)
-    dynamic var dateTaken           :   Date? = nil ///< Date created
+    @objc dynamic var localIdentifier     :   String?     ///< If this represents a local photos asset, its local identifier is here
+    @objc dynamic var dateStateChanged    =   Date()      ///< The last modification timestamp
+    @objc dynamic var type : String       =   ""          ///< The asset type
+    @objc dynamic var pixelWidth          =   Int(0)      ///< Resolution
+    @objc dynamic var pixelHeight         =   Int(0)
+    @objc dynamic var durationSeconds     =   Double(0)
+    @objc dynamic var dateTaken           :   Date? = nil ///< Date created
     
     /// Location data if any
-    dynamic var latitude            =   Double(0)
-    dynamic var longitude           =   Double(0)
-    dynamic var altitude            =   Double(0)
-    dynamic var horizontalAccuracy  =   Double(0)
-    dynamic var verticalAccuracy    =   Double(0)
-    dynamic var hasLocation         =   false
+    @objc dynamic var latitude            =   Double(0)
+    @objc dynamic var longitude           =   Double(0)
+    @objc dynamic var altitude            =   Double(0)
+    @objc dynamic var horizontalAccuracy  =   Double(0)
+    @objc dynamic var verticalAccuracy    =   Double(0)
+    @objc dynamic var hasLocation         =   false
     
     /// Compute the location object
     var location : CLLocation? {

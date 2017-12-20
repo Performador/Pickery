@@ -229,7 +229,7 @@ class RemoteLibrary {
                                     .changes(since: cache.latestUpdate)
                                     .on(failed: { error in
                                         Logger.error(error: error)
-                                    }, completed: { _ in
+                                    }, completed: { 
                                         self.assets.value = cache.assets
                                     }, value: { changes in
                                         cache.update(deltaChanges: changes)

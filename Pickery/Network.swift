@@ -9,7 +9,7 @@
 import Foundation
 import ReactiveSwift
 import Result
-import ReachabilitySwift
+import Reachability
 
 /// The possible states for a local asset during upload
 enum UploadState {

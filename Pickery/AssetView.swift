@@ -9,7 +9,7 @@
 import UIKit
 
 /// Displays an asset image view and an overlay
-class AssetView : UIView {
+class AssetView : UIView, Snapshottable {
     
     /// The subviews
     let imageView   =   AssetImageView(image: nil, asset: nil)
@@ -47,7 +47,7 @@ class AssetView : UIView {
     }
     
     /// Snapshot the asset view for transition
-    override func snapshot() -> UIView {
+    func snapshot() -> UIView {
         return AssetView(asset: asset)
     }
     
