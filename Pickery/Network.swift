@@ -53,9 +53,9 @@ class Network {
         // Reachable
         reachability?.whenReachable = { [ unowned self ] reachability in
             self.gotNetwork.value   =   true
-            self.gotWifi.value      =   reachability.isReachableViaWiFi
+            self.gotWifi.value      =   reachability.connection == .wifi
             
-            Logger.debug(category: .connectivity, message: "Network reachable. Wifi: \(reachability.isReachableViaWiFi)")
+            Logger.debug(category: .connectivity, message: "Network reachable. Wifi: \(reachability.connection == .wifi)")
         }
         
         // Not reachable

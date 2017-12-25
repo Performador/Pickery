@@ -5,7 +5,6 @@
 # Pickery: Open source photos client
 
 [![Build Status](https://travis-ci.org/Performador/Pickery.svg)](https://travis-ci.org/Performador/Pickery)
-![Swift 3.0.x](https://img.shields.io/badge/language-swift%203-4BC51D.svg?style=flat)
 ![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)
 
 This is an iOS client that works with AWS SDK to store your pictures and videos. It handles de-duping and allows deleting the content already uploaded from your phone.

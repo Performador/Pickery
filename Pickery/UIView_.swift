@@ -124,12 +124,4 @@ extension UIView {
         self.layoutIfNeeded()
     }
 }
-/*
-extension UIView : Snapshottable {
-    
-    /// Overwrite to provide custom snapshot functionality
-    func snapshot() -> UIView {
-        return snapshotView(afterScreenUpdates: true) ?? UIView(frame: CGRect.zero)
-    }
-}
- */
+

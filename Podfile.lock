@@ -1,11 +1,11 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
   - Arcane (1.2.1)
-  - AWSCore (2.6.8)
-  - AWSDynamoDB (2.6.8):
-    - AWSCore (= 2.6.8)
-  - AWSS3 (2.6.8):
-    - AWSCore (= 2.6.8)
+  - AWSCore (2.6.10)
+  - AWSDynamoDB (2.6.10):
+    - AWSCore (= 2.6.10)
+  - AWSS3 (2.6.10):
+    - AWSCore (= 2.6.10)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
@@ -66,7 +66,7 @@ CHECKOUT OPTIONS:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
   Eureka:
-    :commit: 076eaaa27d1c90c68f01a6389cfcaa0359ea1a10
+    :commit: a9552a715293c4fc70e26177533461b0e8e7b572
     :git: https://github.com/xmartlabs/Eureka.git
   KDCircularProgress:
     :commit: ba525189fb2dd2b3e0ebbd8ccac77bf2e5915739
@@ -75,9 +75,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Arcane: f3b173e1f9f7828132e014d882af81cadabb24ac
-  AWSCore: 35fca7c45f37f5ffc4ddf75f7aa943f3588d9227
-  AWSDynamoDB: fa6dd3a8dec29373fce4324f5974d4da78949d10
-  AWSS3: 380f57d169fd4ebd0a5fca366b36563a3f6d87b2
+  AWSCore: 5bb072a6b5b185f43ddbd239d6554d2f8a285ad2
+  AWSDynamoDB: 46c7d83862a8375fb824796dc60b04f9273c5d3f
+  AWSS3: 1124570c2c2dba6be7e6e67d123cc5181073c53d
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Eureka: 3311299432b1e11fa4b40796654fc759caabcd93
   FileBrowser: 2ca91ff61c9ea09665eb3b8f9e64a7a77e66a0bf
@@ -92,6 +92,6 @@ SPEC CHECKSUMS:
   SwiftLocation: 8f5ef4f510a45e43239de57a3145b3669301e898
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 42c7bde88b46188bb7fcd3a3caf890af014b0d02
+PODFILE CHECKSUM: b76465b844ad8d18fced76355e0e413328a11e21
 
 COCOAPODS: 1.3.1

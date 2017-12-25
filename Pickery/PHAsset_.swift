@@ -318,7 +318,6 @@ extension PHAsset {
                             
                         case .audio:                        fallthrough
                         case .alternatePhoto:               fallthrough
-                        case .fullSizeVideo:                fallthrough
                         case .adjustmentData:               fallthrough
                         case .adjustmentBasePhoto:          fallthrough
                         case .fullSizePairedVideo:          fallthrough
