@@ -11,9 +11,9 @@ import AWSDynamoDB
 
 /// Represents an asset
 class AmazonModel : AWSDynamoDBObjectModel, AWSDynamoDBModeling {
-    var signature           :   String  =   ""
-    var metaData            :   String?
-    var timeStateChanged    =   NSNumber(value: 0)
+    @objc var signature           :   String  =   ""
+    @objc var metaData            :   String?
+    @objc var timeStateChanged    =   NSNumber(value: 0)
     
     class func dynamoDBTableName() -> String {
         return Amazon.Constants.kPrefix

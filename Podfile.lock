@@ -1,11 +1,11 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
   - Arcane (1.2.1)
-  - AWSCore (2.6.10)
-  - AWSDynamoDB (2.6.10):
-    - AWSCore (= 2.6.10)
-  - AWSS3 (2.6.10):
-    - AWSCore (= 2.6.10)
+  - AWSCore (2.6.12)
+  - AWSDynamoDB (2.6.12):
+    - AWSCore (= 2.6.12)
+  - AWSS3 (2.6.12):
+    - AWSCore (= 2.6.12)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
@@ -15,13 +15,13 @@ PODS:
   - KDCircularProgress (1.5.2)
   - KeychainAccess (3.1.0)
   - ReachabilitySwift (4.1.0)
-  - ReactiveSwift (3.0.0):
+  - ReactiveSwift (3.1.0):
     - Result (~> 3.2)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
+  - Realm (3.1.1):
+    - Realm/Headers (= 3.1.1)
+  - Realm/Headers (3.1.1)
+  - RealmSwift (3.1.1):
+    - Realm (= 3.1.1)
   - Result (3.2.4)
   - SwiftLocation (3.1.0):
     - SwiftyJSON (~> 4.0.0-alpha.1)
@@ -66,7 +66,7 @@ CHECKOUT OPTIONS:
     :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
     :git: https://github.com/ViccAlexander/Chameleon.git
   Eureka:
-    :commit: a9552a715293c4fc70e26177533461b0e8e7b572
+    :commit: 190b90ac0916b65d3cf8a2aac2aa04ef2dab1db6
     :git: https://github.com/xmartlabs/Eureka.git
   KDCircularProgress:
     :commit: ba525189fb2dd2b3e0ebbd8ccac77bf2e5915739
@@ -75,9 +75,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Arcane: f3b173e1f9f7828132e014d882af81cadabb24ac
-  AWSCore: 5bb072a6b5b185f43ddbd239d6554d2f8a285ad2
-  AWSDynamoDB: 46c7d83862a8375fb824796dc60b04f9273c5d3f
-  AWSS3: 1124570c2c2dba6be7e6e67d123cc5181073c53d
+  AWSCore: d0d6e4f6831754aaf98058d2306a016ae71510fe
+  AWSDynamoDB: a1626a8e025a12fa71723da8eee0c1ff51da5dc0
+  AWSS3: c35608e0cdd5172f9e1d943221fd5fde01c5f749
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Eureka: 3311299432b1e11fa4b40796654fc759caabcd93
   FileBrowser: 2ca91ff61c9ea09665eb3b8f9e64a7a77e66a0bf
@@ -85,9 +85,9 @@ SPEC CHECKSUMS:
   KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
   KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
-  ReactiveSwift: d9fe0db33c1aaabecb092e8de83cf52875c0de6f
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
+  Realm: 42d1c38a5b1bbcc828b48a7ce702cb86fc68adf4
+  RealmSwift: d31937ca6a6ee54acde64ec839523c0a3c04924b
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SwiftLocation: 8f5ef4f510a45e43239de57a3145b3669301e898
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa

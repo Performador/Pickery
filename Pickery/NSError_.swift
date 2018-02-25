@@ -30,7 +30,7 @@ extension NSError {
             case AWSS3TransferUtilityErrorType.unknown.rawValue:
                 return "AWS Transfer Utility: unknown (Hmm, not sure what this means)"
             case AWSS3TransferUtilityErrorType.redirection.rawValue:
-                return "AWS Transfer Utility: redirection (Hmm, not sure what this means)"
+                return "AWS Transfer Utility: redirection (Seems like wrong region was selected)"
             case AWSS3TransferUtilityErrorType.clientError.rawValue:
                 return "AWS Transfer Utility: clientError (Hmm, this looks like a bug. Please leave a bug report)"
             case AWSS3TransferUtilityErrorType.serverError.rawValue:

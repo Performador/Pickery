@@ -222,7 +222,6 @@
 		ADA02B9C1D6E08D10092F29D /* AssetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AssetViewController.swift; path = Pickery/AssetViewController.swift; sourceTree = SOURCE_ROOT; };
 		ADA02BA11D6E08D10092F29D /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationController.swift; path = Pickery/NavigationController.swift; sourceTree = SOURCE_ROOT; };
 		ADA02BA21D6E08D10092F29D /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerViewController.swift; path = Pickery/PlayerViewController.swift; sourceTree = SOURCE_ROOT; };
-		ADA02BBA1D6E095C0092F29D /* AmazonSchema.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = AmazonSchema.md; sourceTree = "<group>"; };
 		ADA02BBB1D6E095C0092F29D /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		ADA02BBE1D6E0B610092F29D /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Pickery/ImageCache.swift; sourceTree = SOURCE_ROOT; };
 		ADA02BC41D6F90310092F29D /* FileManager_.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager_.swift; path = Pickery/FileManager_.swift; sourceTree = SOURCE_ROOT; };
@@ -488,7 +487,6 @@
 		ADD8B3DC1D0F5AD80006A41F = {
 			isa = PBXGroup;
 			children = (
-				ADA02BBA1D6E095C0092F29D /* AmazonSchema.md */,
 				ADA02BBB1D6E095C0092F29D /* ReadMe.md */,
 				ADD8B3E91D0F5B240006A41F /* iOS */,
 				ADD8B3FE1D0F5B240006A41F /* iOSTests */,
